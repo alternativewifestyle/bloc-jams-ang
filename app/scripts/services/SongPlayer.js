@@ -31,11 +31,16 @@
             currentSong = song;
          };
 
+         var playSong = function(song) {
+          currentBuzzObject.play();
+          song.playing = true;
+      }
+
          SongPlayer.play = function(song) {
              if (currentSong !== song) {
 
                setSong(song);
-
+playSong(song);
                  currentBuzzObject.play();
                  song.playing = true;
 
